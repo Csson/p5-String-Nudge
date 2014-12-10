@@ -138,6 +138,8 @@ C<nudge> works nicely together with L<qi|Syntax::Feature::Qi>:
 
 =item L<String::Indent>
 
+=item L<qi|Syntax::Feature::Qi>
+
 =back
 
 =head1 AUTHOR

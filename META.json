@@ -38,16 +38,14 @@
       },
       "runtime" : {
          "requires" : {
-            "Sub::Exporter::Progressive" : "0",
-            "perl" : "5.010000",
-            "strict" : "0",
-            "warnings" : "0"
+            "perl" : "5.010000"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0",
-            "syntax" : "0"
+            "Syntax::Feature::Qi" : "0",
+            "Syntax::Feature::Simple::V2" : "0",
+            "Test::NoTabs" : "0"
          }
       }
    },
