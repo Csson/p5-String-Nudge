@@ -6,14 +6,27 @@ Revision history for String-Nudge
  [Bug Fixes]
 
  [Documentation]
+ - Cleanup, add qs example and rebuilt with Pod::Weaver
 
  [Enhancements]
 
  [Meta]
+ - Add github info to meta.
+ - Use @Author::CSSON dist zilla bundle, expanded.
 
  [New Features]
 
  [Revision]
+
+ [Requirements]
+ - Add Test::More as a test prereq.
+ - Remove Syntax::Feature::Simple::V2 as a test prereq.
+ - Remove Test::NoTabs as a test prereq.
+ - Bump Syntax::Feature::Qi test req to 0.2002.
+
+0.0101 2014-12-11T20:51:23Z CET
+ [Meta]
+ - Added prereq.
 
 0.0100 2014-12-10T19:01:55Z CET
  - Initial release
