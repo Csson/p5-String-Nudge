@@ -1,6 +1,10 @@
 # NAME
 
-String::Nudge - Nudges all lines in a multi-line string
+String::Nudge - Indents all lines in a multi-line string
+
+# VERSION
+
+Version 0.0102, released 2015-01-17.
 
 # SYNOPSIS
 
@@ -41,7 +45,11 @@ If `$number_of_spaces` is not given (or isn't an integer >= 0) its default value
 
 Every line in `$string` is indented by `$number_of_spaces`. Lines only consisting of white space is trimmed (but not removed).
 
-`nudge` works nicely together with [qi](https://metacpan.org/pod/Syntax::Feature::Qi):
+## MORE EXAMPLES
+
+### Usage with [qi](https://metacpan.org/pod/Syntax::Feature::Qi)
+
+[Syntax::Feature::Qi](https://metacpan.org/pod/Syntax::Feature::Qi) adds `qi` and `qqi` that removes the same amount of leading whitespace as the first (significant) line has from all lines in a string:
 
     # these three packages are equivalent:
     package Example::Nudge {
@@ -81,21 +89,73 @@ Every line in `$string` is indented by `$number_of_spaces`. Lines only consistin
         }
     }
 
+### Usage with [qs](https://metacpan.org/pod/Syntax::Feature::Qs)
+
+[Syntax::Feature::Qs](https://metacpan.org/pod/Syntax::Feature::Qs) adds `qs` and `qqs` that removes all leading whitespace from all lines in a string:
+
+    # these three packages are equivalent:
+    package Example::Nudge {
+
+        use String::Nudge;
+        use syntax 'qs';
+
+        sub out {
+            print nudge qs{
+                This is
+                a multi line
+
+                string.
+            };
+        }
+    }
+    package Example::Q {
+
+        sub out {
+            print q{
+        This is
+        a multi line
+
+        string.
+    };
+        }
+    }
+    package Example::HereDoc {
+
+        sub out {
+
+            (my $text = <<"        END") =~ s{^ {8}}{}gm;
+                This is
+                a multi line
+
+                string.
+            END
+
+            print $text;
+        }
+    }
+
 # SEE ALSO
 
 - [Indent::String](https://metacpan.org/pod/Indent::String)
 - [String::Indent](https://metacpan.org/pod/String::Indent)
 - [qi](https://metacpan.org/pod/Syntax::Feature::Qi)
+- [qi](https://metacpan.org/pod/Syntax::Feature::Qs)
+
+# SOURCE
+
+[https://github.com/Csson/p5-String-Nudge](https://github.com/Csson/p5-String-Nudge)
+
+# HOMEPAGE
+
+[https://metacpan.org/release/String-Nudge](https://metacpan.org/release/String-Nudge)
 
 # AUTHOR
 
 Erik Carlsson <info@code301.com>
 
-# COPYRIGHT
+# COPYRIGHT AND LICENSE
 
-Copyright 2014 - Erik Carlsson
+This software is copyright (c) 2015 by Erik Carlsson.
 
-# LICENSE
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
