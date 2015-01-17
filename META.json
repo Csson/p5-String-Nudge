@@ -1,10 +1,10 @@
 {
-   "abstract" : "Nudges all lines in a multi-line string",
+   "abstract" : "Indents all lines in a multi-line string",
    "author" : [
       "Erik Carlsson <info@code301.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.143240",
+   "generated_by" : "Dist::Zilla version 5.029, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "perl_5"
    ],
@@ -31,8 +31,6 @@
       },
       "develop" : {
          "requires" : {
-            "Test::More" : "0",
-            "Test::NoTabs" : "0",
             "Test::Pod" : "1.41"
          }
       },
@@ -44,13 +42,29 @@
       },
       "test" : {
          "requires" : {
-            "Syntax::Feature::Qi" : "0",
-            "Syntax::Feature::Simple::V2" : "0",
-            "Test::NoTabs" : "0"
+            "Syntax::Feature::Qi" : "0.2002",
+            "Test::More" : "0.96"
          }
       }
    },
+   "provides" : {
+      "String::Nudge" : {
+         "file" : "lib/String/Nudge.pm",
+         "version" : "0.0102"
+      }
+   },
    "release_status" : "stable",
-   "version" : "0.0101"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/Csson/p5-String-Nudge/issues"
+      },
+      "homepage" : "https://metacpan.org/release/String-Nudge",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/Csson/p5-String-Nudge.git",
+         "web" : "https://github.com/Csson/p5-String-Nudge"
+      }
+   },
+   "version" : "0.0102"
 }
 
