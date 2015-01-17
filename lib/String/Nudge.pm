@@ -1,8 +1,11 @@
-package String::Nudge;
-
+use 5.10.1;
 use strict;
 use warnings;
-use 5.010000;
+
+package String::Nudge;
+
+# VERSION
+# ABSTRACT: Indents all lines in a multi-line string
 
 use Sub::Exporter::Progressive -setup => {
     exports => [qw/nudge/],
@@ -46,10 +49,6 @@ __END__
 
 =encoding utf-8
 
-=head1 NAME
-
-String::Nudge - Nudges all lines in a multi-line string
-
 =head1 SYNOPSIS
 
     use String::Nudge;
@@ -90,7 +89,11 @@ If C<$number_of_spaces> is not given (or isn't an integer >= 0) its default valu
 
 Every line in C<$string> is indented by C<$number_of_spaces>. Lines only consisting of white space is trimmed (but not removed).
 
-C<nudge> works nicely together with L<qi|Syntax::Feature::Qi>:
+=head2 MORE EXAMPLES
+
+=head3 Usage with L<qi|Syntax::Feature::Qi>
+
+L<Syntax::Feature::Qi> adds C<qi> and C<qqi> that removes the same amount of leading whitespace as the first (significant) line has from all lines in a string:
 
     # these three packages are equivalent:
     package Example::Nudge {
@@ -130,29 +133,57 @@ C<nudge> works nicely together with L<qi|Syntax::Feature::Qi>:
         }
     }
 
+=head3 Usage with L<qs|Syntax::Feature::Qs>
+
+L<Syntax::Feature::Qs> adds C<qs> and C<qqs> that removes all leading whitespace from all lines in a string:
+
+    # these three packages are equivalent:
+    package Example::Nudge {
+
+        use String::Nudge;
+        use syntax 'qs';
+
+        sub out {
+            print nudge qs{
+                This is
+                a multi line
+
+                string.
+            };
+        }
+    }
+    package Example::Q {
+
+        sub out {
+            print q{
+        This is
+        a multi line
+
+        string.
+    };
+        }
+    }
+    package Example::HereDoc {
+
+        sub out {
+
+            (my $text = <<"        END") =~ s{^ {8}}{}gm;
+                This is
+                a multi line
+
+                string.
+            END
+
+            print $text;
+        }
+    }
+
 =head1 SEE ALSO
 
-=over 4
-
-=item L<Indent::String>
-
-=item L<String::Indent>
-
-=item L<qi|Syntax::Feature::Qi>
-
-=back
-
-=head1 AUTHOR
-
-Erik Carlsson E<lt>info@code301.comE<gt>
-
-=head1 COPYRIGHT
-
-Copyright 2014 - Erik Carlsson
-
-=head1 LICENSE
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+=for :list
+* L<Indent::String>
+* L<String::Indent>
+* L<qi|Syntax::Feature::Qi>
+* L<qi|Syntax::Feature::Qs>
 
 =cut
