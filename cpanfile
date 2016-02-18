@@ -1,4 +1,4 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-18 23:33:32 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-18 23:51:48 UTC.
 
 on runtime => sub {
     requires 'Exporter' => '5.67';
@@ -27,7 +27,6 @@ on develop => sub {
     requires 'Dist::Zilla' => '5.000';
     requires 'Dist::Zilla::Plugin::Authority' => '1.009';
     requires 'Dist::Zilla::Plugin::BumpVersionAfterRelease::Transitional' => '0.007';
-    requires 'Dist::Zilla::Plugin::ChangeStats::Dependencies::Git' => '0.0100';
     requires 'Dist::Zilla::Plugin::CheckChangesHasContent' => '0.008';
     requires 'Dist::Zilla::Plugin::Clean' => '0.07';
     requires 'Dist::Zilla::Plugin::ConfirmRelease' => '0';
