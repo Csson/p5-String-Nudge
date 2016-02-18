@@ -4,17 +4,16 @@ use String::Nudge;
 use syntax 'qi';
 
 is nudge('basic'), '    basic', 'handles one liners, with default nudge';
-
 is nudge(2, 'basic'), '  basic', 'handles custom nudge';
-
 is nudge_wp(), '   basic', 'without parenthesis';
-
 is nudge_fa(), '   basic', 'called with fat arrow';
-
-
 is nudge(2, qi{    nudge}), '  nudge', 'qi: single line';
 
-
+{
+    local $SIG{__WARN__} = sub {};
+    is nudge(-1, 'nudge'), '    nudge', 'nudge default if indent is negative';
+    is nudge('a', 'nudge'), '    nudge', 'nudge default if indent is a non-integer';
+}
 
 is  nudge(2, qq{   This
           is

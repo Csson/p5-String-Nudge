@@ -2,9 +2,19 @@
 
 String::Nudge - Indents all lines in a multi-line string
 
+<div>
+    <p>
+    <img src="https://img.shields.io/badge/perl-5.10+-blue.svg" alt="Requires Perl 5.10+" />
+    <a href="https://travis-ci.org/Csson/p5-String-Nudge"><img src="https://api.travis-ci.org/Csson/p5-String-Nudge.svg?branch=master" alt="Travis status" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/String-Nudge-0.1002"><img src="https://badgedepot.code301.com/badge/kwalitee/String-Nudge/0.1002" alt="Distribution kwalitee" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=String-Nudge%200.1002"><img src="https://badgedepot.code301.com/badge/cpantesters/String-Nudge/0.1002" alt="CPAN Testers result" /></a>
+    <img src="https://img.shields.io/badge/coverage-87.2%-orange.svg" alt="coverage 87.2%" />
+    </p>
+</div>
+
 # VERSION
 
-Version 0.0102, released 2015-01-17.
+Version 0.1002, released 2016-02-18.
 
 # SYNOPSIS
 
@@ -139,7 +149,7 @@ Every line in `$string` is indented by `$number_of_spaces`. Lines only consistin
 - [Indent::String](https://metacpan.org/pod/Indent::String)
 - [String::Indent](https://metacpan.org/pod/String::Indent)
 - [qi](https://metacpan.org/pod/Syntax::Feature::Qi)
-- [qi](https://metacpan.org/pod/Syntax::Feature::Qs)
+- [qs](https://metacpan.org/pod/Syntax::Feature::Qs)
 
 # SOURCE
 
@@ -155,7 +165,7 @@ Erik Carlsson <info@code301.com>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Erik Carlsson.
+This software is copyright (c) 2016 by Erik Carlsson.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

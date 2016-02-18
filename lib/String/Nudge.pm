@@ -1,18 +1,15 @@
-use 5.10.1;
+use 5.10.0;
 use strict;
 use warnings;
 
 package String::Nudge;
 
-# VERSION
 # ABSTRACT: Indents all lines in a multi-line string
+# AUTHORITY
+our $VERSION = '0.1002';
 
-use Sub::Exporter::Progressive -setup => {
-    exports => [qw/nudge/],
-    groups => {
-        default => [qw/nudge/],
-    },
-};
+use Exporter 'import';
+our @EXPORT = qw/nudge/;
 
 sub nudge ($;$) {
     my $first = shift;
@@ -27,7 +24,7 @@ sub nudge ($;$) {
             $string = $second;
         }
         else {
-            warnings::warn(numeric => q{first argument to nudge isn't numeric.});
+            warnings::warn(numeric => q{first argument to nudge not an integer >= 0.});
             $string = $second;
         }
     }
@@ -184,6 +181,6 @@ L<Syntax::Feature::Qs> adds C<qs> and C<qqs> that removes all leading whitespace
 * L<Indent::String>
 * L<String::Indent>
 * L<qi|Syntax::Feature::Qi>
-* L<qi|Syntax::Feature::Qs>
+* L<qs|Syntax::Feature::Qs>
 
 =cut

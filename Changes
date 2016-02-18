@@ -1,6 +1,12 @@
 Revision history for String-Nudge
 
 {{$NEXT}}
+
+  - Fix typo in link.
+  - Use Exporter instead of Sub::Exporter::Progressive.
+  - Small improvements to tests.
+
+0.1001  2015-01-17T14:58:00Z CET
  [Documentation]
  - Cleanup, add qs example, and rebuilt with Pod::Weaver.
 

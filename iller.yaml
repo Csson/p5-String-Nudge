@@ -8,8 +8,7 @@ prereqs:
   runtime:
     requires:
       - perl: 5.010000
-      - Pod::Weaver::Config::Assembler
-      - Path::Tiny
+      - Exporter: 5.67
 
 plugins:
  - +config: Author::CSSON
@@ -25,8 +24,6 @@ doctype: cpanfile
 
 ---
 doctype: gitignore
-
 config: Author::CSSON
-
 always:
  - /String-Nudge-*
