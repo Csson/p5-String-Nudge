@@ -1,0 +1,32 @@
+---
+doctype: dist
+
+header:
+  name: String-Nudge
+
+prereqs:
+  runtime:
+    requires:
+      - perl: 5.010000
+      - Pod::Weaver::Config::Assembler
+      - Path::Tiny
+
+plugins:
+ - +config: Author::CSSON
+
+---
+doctype: weaver
+
+plugins:
+ - +config: Author::CSSON
+
+---
+doctype: cpanfile
+
+---
+doctype: gitignore
+
+config: Author::CSSON
+
+always:
+ - /String-Nudge-*
