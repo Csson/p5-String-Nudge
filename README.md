@@ -8,7 +8,7 @@ String::Nudge - Indents all lines in a multi-line string
     <a href="https://travis-ci.org/Csson/p5-String-Nudge"><img src="https://api.travis-ci.org/Csson/p5-String-Nudge.svg?branch=master" alt="Travis status" /></a>
     <a href="http://cpants.cpanauthors.org/dist/String-Nudge-0.1002"><img src="https://badgedepot.code301.com/badge/kwalitee/String-Nudge/0.1002" alt="Distribution kwalitee" /></a>
     <a href="http://matrix.cpantesters.org/?dist=String-Nudge%200.1002"><img src="https://badgedepot.code301.com/badge/cpantesters/String-Nudge/0.1002" alt="CPAN Testers result" /></a>
-    <img src="https://img.shields.io/badge/coverage-87.2%-orange.svg" alt="coverage 87.2%" />
+    <img src="https://img.shields.io/badge/coverage-100.0%-brightgreen.svg" alt="coverage 100.0%" />
     </p>
 </div>
 
