@@ -24,7 +24,9 @@ my %WriteMakefileArgs = (
     "File::Spec" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
-    "Test::More" => "0.96"
+    "Syntax::Feature::Qi" => "0.2004",
+    "Test::More" => "0.96",
+    "syntax" => 0
   },
   "VERSION" => "0.1002",
   "test" => {
@@ -39,7 +41,9 @@ my %FallbackPrereqs = (
   "File::Spec" => 0,
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
-  "Test::More" => "0.96"
+  "Syntax::Feature::Qi" => "0.2004",
+  "Test::More" => "0.96",
+  "syntax" => 0
 );
 
 

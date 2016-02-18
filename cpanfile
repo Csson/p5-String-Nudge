@@ -1,4 +1,4 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-18 23:51:48 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-18 23:56:12 UTC.
 
 on runtime => sub {
     requires 'Exporter' => '5.67';
@@ -9,7 +9,9 @@ on test => sub {
     requires 'File::Spec' => '0';
     requires 'IO::Handle' => '0';
     requires 'IPC::Open3' => '0';
+    requires 'Syntax::Feature::Qi' => '0.2004';
     requires 'Test::More' => '0.96';
+    requires 'syntax' => '0';
 };
 on test => sub {
     recommends 'CPAN::Meta' => '2.120900';
