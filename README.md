@@ -14,7 +14,7 @@ String::Nudge - Indents all lines in a multi-line string
 
 # VERSION
 
-Version 0.1002, released 2016-02-18.
+Version 1.0000, released 2016-02-19.
 
 # SYNOPSIS
 

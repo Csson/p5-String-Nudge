@@ -134,7 +134,7 @@
    "provides" : {
       "String::Nudge" : {
          "file" : "lib/String/Nudge.pm",
-         "version" : "0.1002"
+         "version" : "1.0000"
       }
    },
    "release_status" : "stable",
@@ -149,7 +149,7 @@
          "web" : "https://github.com/Csson/p5-String-Nudge"
       }
    },
-   "version" : "0.1002",
+   "version" : "1.0000",
    "x_authority" : "cpan:CSSON"
 }
 
