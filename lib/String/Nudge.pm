@@ -6,7 +6,7 @@ package String::Nudge;
 
 # ABSTRACT: Indents all lines in a multi-line string
 # AUTHORITY
-our $VERSION = '1.0001';
+our $VERSION = '1.0002';
 
 use Exporter 'import';
 our @EXPORT = qw/nudge/;
