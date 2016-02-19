@@ -12,13 +12,20 @@ Revision history for String-Nudge
  [New Features]
 
  [Other Changes]
-  - Fix a small packaging issue.
 
  [Requirements]
 
  [Stats & Dependency Changes]
 
  [Testing]
+
+1.0001 2016-02-19T13:46:56Z UTC
+ [Other Changes]
+ - Fix a small packaging issue.
+
+ [Stats & Dependency Changes]
+ - 2 files changed, 1 insertion(+), 3 deletions(-)
+ - (dev req) + Dist::Zilla::Plugin::ChangeStats::Dependencies::Git 0.0100
 
 1.0000 2016-02-19T00:00:46Z UTC
  - Fix typo in link.
