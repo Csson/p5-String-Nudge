@@ -12,6 +12,7 @@ Revision history for String-Nudge
  [New Features]
 
  [Other Changes]
+ - Replaced Travis CI with Github Actions.
 
  [Requirements]
 
